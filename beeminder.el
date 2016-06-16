@@ -1758,7 +1758,7 @@ under the \"beeminder-el\" subdirectory and filename
   (make-directory (concat temporary-file-directory "beeminder-el") t)
   (let* ((image-file (concat temporary-file-directory "beeminder-el/" slug-str ".png"))
 	 (inhibit-message t))
-    (url-copy-file (alist-get 'graph_url (beeminder-slug-to-goal (intern slug-str)))
+    (url-copy-file (beeminder-alist-get 'graph_url (beeminder-slug-to-goal (intern slug-str)))
 		   image-file
 		   t)
     image-file))
