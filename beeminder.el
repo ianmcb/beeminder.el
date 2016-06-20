@@ -41,6 +41,7 @@
   (defmacro cadddr (X)
     `(car (cdr (cdr (cdr ,X)))))
   (defalias 'acons 'cl-acons)
+  (defalias 'position 'cl-position)
   (defmacro setq-local (var val)
     "This is taken from subr.el."
     `(set (make-local-variable ',var) ,val))
